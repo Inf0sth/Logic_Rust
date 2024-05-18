@@ -18,3 +18,7 @@ their number is taken as past and will not be repeated in 100 rounds.
 
 To test this project, don´t forget exec this command in the same directory of "Cargo.toml":
 `cargo build`
+
+Example:
+
+![image](https://github.com/Inf0sth/Logic_Rust/assets/106565371/0f45e5c5-5040-45fa-8c17-48093d465da8)
