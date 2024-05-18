@@ -25,5 +25,4 @@ fn main() {
         }
         round+=1;
     }
-    println!("Hello, world!");
 }
