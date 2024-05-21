@@ -1,6 +1,7 @@
 
 fn main() {
     println!("Hello, world!{:?}", encrypt());
+    decrypt();
 }
 
 fn encrypt(){
