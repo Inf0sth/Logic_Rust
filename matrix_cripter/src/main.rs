@@ -1,36 +1,24 @@
+mod ops;
+
+use rand::Rng;
 
 fn main() {
-    println!("Hello, world!{:?}", encrypt());
-    decrypt();
+    println!("Hello, world!{:?}", encrypt());    decrypt();
 }
 
-fn encrypt(){
+fn encrypt() ->u32{
+    let mut rng = rand::thread_rng();
     let mut matrix: [u32; 9] = [0; 9];
-    matrix[0] = 1;
+    for val in 0..8{
+        matrix[val] = rng.gen_range(100..=999);
+    }
+    let key = ops::determinant(&matrix);
+    return key;
 }
+
+
 /*
 def cifrar(message):
-    # Matriz secundaria para operar la principal:
-    matriz = zeros((2, 2)) # Matriz 2 x 2
-
-    # Rellenamos la matriz:
-    for i in range(2):
-        for j in range(2):
-            rannum = random.randint(10, 99) # Generamos los valores aleatoriamente
-            matriz[i, j] = rannum
-
-    print(matriz)
-
-    # Obtener determinante de la matriz 2 x 2: 
-    a = matriz[0, 0]
-    b = matriz[0, 1]
-    c = matriz[1, 0]
-    d = matriz[1, 1]
-
-    det = a * d - b * c
-    print("Determinante (clave):", det)
-
-
     # Creacion de la matriz cuadrada principal
     x = 1.5 * (float(len(message))) # Multiplicamos por 1.5 para no tener sobrantes
     er_r = 0.0001  # Margen de error tolerable
