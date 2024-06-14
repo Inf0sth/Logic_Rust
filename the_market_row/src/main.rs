@@ -1,8 +1,8 @@
-use rand::Rng;
+use rand::{rngs::ThreadRng, Rng};
 
 fn main() {
-    let mut rng = rand::thread_rng();
-    let mut clients_row = Vec::new();
+    let mut rng: ThreadRng = rand::thread_rng();
+    let mut clients_row: Vec<u8> = Vec::new();
     let mut client: u8 = 1;
     let mut decision: u8;
     let mut round: u8 = 0;
@@ -27,6 +27,8 @@ fn main() {
     }
 }
 
-fn row(){
-
+fn row(client: u8){
+    let mut rng: ThreadRng = rand::thread_rng();
+    let mut clients_row: Vec<u8> = Vec::new();
+    let mut decision: u8;
 }
