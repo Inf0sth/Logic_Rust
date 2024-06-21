@@ -5,4 +5,3 @@ A repository with a variety of programming logic exercises in Rust 🦀
 Projects:
 
 - [The Market](/the_market_row/) 
-- [Configuración Electronica](/e_conf/)
